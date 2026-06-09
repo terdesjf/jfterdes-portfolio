@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================================================
+   THEME TOKENS
+   --bg / --surface / --fg etc. flip between dark & light via the `.dark` class.
+   --accent / --accent-soft are set inline on <html> by the theme provider so
+   the accent-color picker works at runtime.
+   =========================================================================== */
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+
+  /* Light theme (default) */
+  --bg: 250 250 252;
+  --surface: 255 255 255;
+  --surface-2: 244 244 248;
+  --border: 226 226 234;
+  --fg: 17 19 26;
+  --muted: 110 114 128;
+
+  /* Accent — overridden inline by ThemeProvider */
+  --accent: 16 185 129;
+  --accent-soft: 16 185 129;
+}
+
+.dark {
+  --bg: 8 9 13;
+  --surface: 17 19 26;
+  --surface-2: 24 27 36;
+  --border: 38 41 54;
+  --fg: 237 239 245;
+  --muted: 148 153 168;
+}
+
+* {
+  border-color: rgb(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--fg));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--bg));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--border));
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--accent));
+}
+
+/* Selection */
+::selection {
+  background: rgb(var(--accent) / 0.3);
+  color: rgb(var(--fg));
+}
+
+/* Utility: accent gradient text */
+.text-gradient {
+  background: linear-gradient(
+    120deg,
+    rgb(var(--accent)),
+    rgb(var(--fg))
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Utility: soft glowing accent blob */
+.glow {
+  background: radial-gradient(
+    circle at center,
+    rgb(var(--accent) / 0.25),
+    transparent 70%
+  );
+}
+
+/* Grid background pattern */
+.bg-grid {
+  background-image: linear-gradient(
+      rgb(var(--border) / 0.4) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgb(var(--border) / 0.4) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
