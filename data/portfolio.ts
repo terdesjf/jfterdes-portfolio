@@ -69,7 +69,7 @@ export const projects: Project[] = [
       "A production lead-gen system that discovers and enriches affiliate marketers across 8+ sources (Google, Bing, YouTube, Kick, X, TikTok, Snapchat, Telegram, Facebook). Built 3-phase scraping engines on a multi-VM AWS fleet with Selenium/GoLogin, proxy rotation, automated captcha solving, and nightly Monday.com CRM sync — processing ~8.8k enrichment jobs per week.",
     tags: ["Python", "Selenium", "GoLogin", "Next.js", "Supabase", "AWS EC2", "Monday.com"],
     icon: "🛰️",
-    liveUrl: "",
+    liveUrl: "https://google-lead-gen.vercel.app/",
     repoUrl: "https://github.com/Optinet-Solutions-AI/Google-Lead-Gen",
     featured: true,
   },
