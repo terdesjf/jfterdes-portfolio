@@ -32,9 +32,9 @@ export const profile = {
   formspreeId: "",
   socials: {
     github: "https://github.com/jose-innovationhub",
-    linkedin: "", // ← add your LinkedIn URL here
+    linkedin: "https://www.linkedin.com/in/jose-felipe-terdes/",
     twitter: "",
-    website: "https://optinetsolutions.com",
+    website: "",
   },
 };
 
