@@ -24,6 +24,12 @@ export const profile = {
   // Drop your résumé PDF into /public (e.g. public/jose-terdes-resume.pdf) and
   // set this to "/jose-terdes-resume.pdf" to show a download button in the hero.
   resumeUrl: "",
+  // Makes the contact form actually deliver messages to your inbox.
+  // 1. Create a free form at https://formspree.io
+  // 2. It gives an endpoint like https://formspree.io/f/abcdwxyz
+  // 3. Paste ONLY the id part (e.g. "abcdwxyz") between the quotes below.
+  // Leave blank to fall back to opening the visitor's email client (mailto).
+  formspreeId: "",
   socials: {
     github: "https://github.com/jose-innovationhub",
     linkedin: "", // ← add your LinkedIn URL here
@@ -83,7 +89,7 @@ export const projects: Project[] = [
       "A multi-tenant SaaS that cuts clinic no-shows with automated Twilio reminders, Anthropic Claude-powered risk scoring, auto no-show sweeps, and smart waitlist auto-fill. Built on Next.js + Prisma with tenant isolation at every layer, HMAC-signed one-tap action links, TCPA-compliant consent tracking, an OTP patient portal, and a distributed cron worker.",
     tags: ["Next.js", "Prisma", "PostgreSQL", "Twilio", "Anthropic Claude", "NextAuth", "Multi-tenant"],
     icon: "🏥",
-    liveUrl: "",
+    liveUrl: "https://noshowguard-ai.vercel.app/",
     repoUrl: "",
     featured: true,
   },

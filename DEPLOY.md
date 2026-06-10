@@ -8,11 +8,11 @@ and the build is verified. Going live is **two commands**.
 From inside the project folder (`c:\Users\terde\Documents\jfterdes-portfolio`):
 
 ```bash
-vercel login      # opens your browser — sign in (GitHub/Google/email)
-vercel            # deploys a preview URL
+npx vercel login      # opens your browser — sign in (GitHub/Google/email)
+npx vercel            # deploys a preview URL
 ```
 
-The first `vercel` run asks a few questions — accept the defaults:
+The first `npx vercel` run asks a few questions — accept the defaults:
 
 - *Set up and deploy?* → **Y**
 - *Which scope?* → your account
@@ -24,7 +24,7 @@ The first `vercel` run asks a few questions — accept the defaults:
 When you're happy with the preview, ship it to production:
 
 ```bash
-vercel --prod
+npx vercel --prod
 ```
 
 You'll get a public URL like `https://jfterdes-portfolio.vercel.app`. You can
@@ -57,8 +57,8 @@ on, pushes to `main` deploy automatically.
 ## 🧰 Useful commands
 
 ```bash
-npm run dev      # local dev server (http://localhost:3000)
-npm run build    # production build
-vercel           # deploy a preview
-vercel --prod    # deploy to production
+npm run dev          # local dev server (http://localhost:3000)
+npm run build        # production build
+npx vercel           # deploy a preview
+npx vercel --prod    # deploy to production
 ```

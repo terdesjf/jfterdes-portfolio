@@ -7,10 +7,10 @@ import { SectionHeading } from "../section-heading";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-// Set NEXT_PUBLIC_FORMSPREE_ID in .env.local (see .env.example) to enable
-// real form delivery. If it's missing, the form gracefully falls back to a
-// mailto: link so it always works.
-const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+// Set profile.formspreeId in data/portfolio.ts to enable real form delivery.
+// If it's empty, the form gracefully falls back to a mailto: link so it always
+// works.
+const FORMSPREE_ID = profile.formspreeId;
 
 export function Contact() {
   const [name, setName] = useState("");
