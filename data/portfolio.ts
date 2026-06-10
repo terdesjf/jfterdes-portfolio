@@ -56,6 +56,8 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
+  // Your role on the project — rendered as a highlighted line on the card.
+  role?: string;
   liveUrl?: string;
   repoUrl?: string;
   icon?: string;
@@ -68,6 +70,7 @@ export const projects: Project[] = [
     description:
       "A production lead-gen system that discovers and enriches affiliate marketers across 8+ sources (Google, Bing, YouTube, Kick, X, TikTok, Snapchat, Telegram, Facebook). Built 3-phase scraping engines on a multi-VM AWS fleet with Selenium/GoLogin, proxy rotation, automated captcha solving, and nightly Monday.com CRM sync — processing ~8.8k enrichment jobs per week.",
     tags: ["Python", "Selenium", "GoLogin", "Next.js", "Supabase", "AWS EC2", "Monday.com"],
+    role: "Project Lead — drove client discovery, proposals, and end-to-end delivery",
     icon: "🛰️",
     liveUrl: "https://google-lead-gen.vercel.app/",
     repoUrl: "https://github.com/Optinet-Solutions-AI/Google-Lead-Gen",
@@ -78,6 +81,7 @@ export const projects: Project[] = [
     description:
       "A Next.js platform that pulls Intercom conversations and runs automated quality analysis via OpenAI's Batch API — analyzing 26k+ conversations. Features role-gated dashboards, a 7-pattern escalation matrix routing issues to Asana, bidirectional status sync, hourly cron jobs, daily email digests, and a Telegram bot posting escalation snapshots.",
     tags: ["Next.js", "TypeScript", "OpenAI Batch API", "Supabase", "Intercom", "Asana", "Telegram"],
+    role: "Project Lead — ran discovery & demos with the client, proposed scope, and owned delivery",
     icon: "💬",
     liveUrl: "https://ai-chat-qa-tool.vercel.app",
     repoUrl: "https://github.com/Optinet-Solutions-AI/ai-chat-qa-tool",
@@ -88,6 +92,7 @@ export const projects: Project[] = [
     description:
       "A multi-tenant SaaS that cuts clinic no-shows with automated Twilio reminders, Anthropic Claude-powered risk scoring, auto no-show sweeps, and smart waitlist auto-fill. Built on Next.js + Prisma with tenant isolation at every layer, HMAC-signed one-tap action links, TCPA-compliant consent tracking, an OTP patient portal, and a distributed cron worker.",
     tags: ["Next.js", "Prisma", "PostgreSQL", "Twilio", "Anthropic Claude", "NextAuth", "Multi-tenant"],
+    role: "Project Lead — client-facing throughout: discovery, proposals, and full delivery",
     icon: "🏥",
     liveUrl: "https://noshowguard-ai.vercel.app/",
     repoUrl: "https://github.com/jose-innovationhub/noshowguard",

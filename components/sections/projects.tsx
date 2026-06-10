@@ -50,6 +50,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       <h3 className="relative mt-5 text-lg font-semibold tracking-tight transition group-hover:text-accent">
         {project.title}
       </h3>
+      {project.role && (
+        <p className="relative mt-1.5 flex items-center gap-1.5 text-xs font-medium text-accent">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20 7h-9M14 17H5M17 3l4 4-4 4M7 21l-4-4 4-4" />
+          </svg>
+          {project.role}
+        </p>
+      )}
       <p className="relative mt-2 flex-1 text-sm leading-relaxed text-muted">
         {project.description}
       </p>
