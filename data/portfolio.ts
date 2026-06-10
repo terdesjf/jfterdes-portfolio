@@ -90,7 +90,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "Prisma", "PostgreSQL", "Twilio", "Anthropic Claude", "NextAuth", "Multi-tenant"],
     icon: "🏥",
     liveUrl: "https://noshowguard-ai.vercel.app/",
-    repoUrl: "",
+    repoUrl: "https://github.com/jose-innovationhub/noshowguard",
     featured: true,
   },
   {
