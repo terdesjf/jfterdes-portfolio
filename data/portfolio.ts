@@ -23,7 +23,7 @@ export const profile = {
   phone: "0977 369 3095",
   // Drop your résumé PDF into /public (e.g. public/jose-terdes-resume.pdf) and
   // set this to "/jose-terdes-resume.pdf" to show a download button in the hero.
-  resumeUrl: "",
+  resumeUrl: "/jose-terdes-resume.pdf",
   // Makes the contact form actually deliver messages to your inbox.
   // 1. Create a free form at https://formspree.io
   // 2. It gives an endpoint like https://formspree.io/f/abcdwxyz
