@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { about, profile } from "@/data/portfolio";
 import { Reveal } from "../reveal";
 import { SectionHeading } from "../section-heading";
@@ -40,16 +41,14 @@ export function About() {
           <div className="relative">
             <div className="glow absolute inset-0 scale-90 rounded-3xl" />
             <div className="relative overflow-hidden rounded-3xl border border-border bg-surface">
-              {/* Avatar placeholder — swap for an <Image> when you add a photo */}
-              <div className="flex aspect-square items-center justify-center bg-gradient-to-br from-accent/20 to-surface-2">
-                <span className="font-mono text-7xl font-bold text-accent/40">
-                  {profile.name
-                    .split(" ")
-                    .map((w) => w[0])
-                    .join("")
-                    .slice(0, 2)
-                    .toUpperCase()}
-                </span>
+              <div className="relative aspect-square bg-gradient-to-br from-accent/20 to-surface-2">
+                <Image
+                  src="/jose-terdes.webp"
+                  alt={`${profile.name}, ${profile.roles[0]}`}
+                  fill
+                  sizes="(min-width: 1024px) 28rem, 100vw"
+                  className="object-cover"
+                />
               </div>
               <div className="space-y-3 p-6">
                 <InfoRow label="Name" value={profile.name} />
