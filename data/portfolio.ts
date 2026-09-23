@@ -42,12 +42,12 @@ export const about = {
   paragraphs: [
     "I'm an AI Automation Engineer at Optinet Solutions, where I lead client-facing AI projects end-to-end — owning architecture, implementation, and delivery for clients in Europe and beyond. I specialize in turning fuzzy business problems into production-grade systems built on OpenAI and Anthropic Claude.",
     "My background is full-stack: a BS in Computer Science from Cebu Institute of Technology, plus production experience across blockchain certification systems, payment platforms, and SaaS. I've shipped with Next.js, Spring Boot, .NET, and Python, and I care as much about reliability and clean architecture as I do about shipping fast.",
-    "Lately I've been building extensively with AI — multi-source scraping fleets on AWS, automated QA pipelines over thousands of conversations, and a multi-tenant healthcare SaaS. I like systems that quietly do their job every day, not demos that break in production.",
+    "Lately I've been building extensively with AI — multi-source scraping fleets on AWS, automated QA pipelines over thousands of conversations, a multi-tenant healthcare SaaS, a voice-first relationship CRM, and a suite of multi-brand SEO dashboards with built-in AI assistants. I like systems that quietly do their job every day, not demos that break in production.",
   ],
   stats: [
     { value: "8+", label: "Platforms scraped" },
     { value: "26k+", label: "Conversations AI-analyzed" },
-    { value: "3", label: "Production AI systems" },
+    { value: "9", label: "Production systems shipped" },
     { value: "2024", label: "BS Computer Science" },
   ],
 };
@@ -99,6 +99,39 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Networky.ai — Relationship Intelligence CRM",
+    description:
+      "A voice-first personal CRM: speak one sentence and AI fills in the contact, then generates relationship profiles, meeting briefings, follow-up drafts, suggested introductions, and gift ideas. Syncs contacts and calendars from Google, Outlook, Salesforce, and HubSpot over OAuth with encrypted tokens and a daily cron, plus LinkedIn/vCard import, multi-user workspaces with invite links, and Supabase-backed file storage.",
+    tags: ["Next.js", "TypeScript", "Prisma", "Supabase", "OpenAI", "OAuth", "Vercel Cron"],
+    role: "Lead Developer — top contributor on a 3-person team, from spec to production",
+    icon: "🤝",
+    repoUrl: "https://github.com/optinet-solutions-sandbx/Personal-Network-Information-System",
+    featured: true,
+  },
+  {
+    title: "Multi-Brand SEO & QA Dashboard Platform",
+    description:
+      "A family of client dashboards that replaced spreadsheet-driven SEO reporting for three iGaming affiliate clients (7 brands, 25+ domains). Each tracks SEO, site health, PageSpeed, backlinks, QA, and Google rankings, with weekly ranking sync from a vendor API via Vercel Cron, an OpenAI-powered \"Ask AI\" assistant with streamed answers, role-based access enforced by Postgres RLS, portal SSO, audit logs, and Excel importers that migrated 18+ months of history.",
+    tags: ["Next.js 16", "React 19", "Supabase", "Postgres RLS", "OpenAI", "Recharts", "Vercel Cron"],
+    role: "Core Developer — built and maintained all three client deployments on a shared UI package",
+    icon: "📊",
+    featured: true,
+  },
+  {
+    title: "Keyword Ranking Trackers",
+    description:
+      "Lightweight ranking dashboards for SEO teams: one monitors 31 casino and betting brands across 4 languages, another tracks an affiliate review site's keywords as dated snapshots in a spreadsheet-style matrix with movement indicators. Both use a serverless proxy to a Ranks API, daily Supabase snapshots, admin-approved sign-ups, CSV/Excel export, and an OpenAI \"Ask AI\" assistant grounded in the current data, with voice input.",
+    tags: ["React 19", "Vite", "TypeScript", "Supabase", "Vercel Functions", "OpenAI", "Vitest"],
+    icon: "📈",
+  },
+  {
+    title: "LLM API Challenge",
+    description:
+      "A FastAPI service in front of Google Gemini that exposes four prompt-engineering tasks as typed endpoints: zero-shot classification with fuzzy shortlist-and-rerank, schema-driven extraction, relative-date resolution, and natural-language random ranges. A router with a regex fast path skips the LLM for simple queries, and the service guards against prompt injection. Covered by ~137 tests (offline fakes plus a live suite) in CI.",
+    tags: ["Python", "FastAPI", "Google Gemini", "Pydantic", "pytest", "GitHub Actions"],
+    icon: "🧩",
+  },
+  {
     title: "MARINA BEST™",
     description:
       "A blockchain-enabled automated certification system for maritime credentials, built at Monstarlab. Worked across frontend and backend to deliver secure, transparent, tamper-proof digital certificate workflows aligned with MARINA regulatory requirements.",
@@ -145,6 +178,8 @@ export const skills: SkillGroup[] = [
       "Conversational Systems",
       "n8n",
       "Claude Code",
+      "Google Gemini",
+      "Voice / Speech-to-Text",
     ],
   },
   {
@@ -160,6 +195,8 @@ export const skills: SkillGroup[] = [
       "React",
       "Node.js",
       "Express.js",
+      "FastAPI",
+      "Vite",
       "Spring Boot",
       "ASP.NET Core",
       ".NET 6 Web API",
@@ -169,7 +206,7 @@ export const skills: SkillGroup[] = [
   {
     category: "Data & Backend",
     icon: "🗄️",
-    skills: ["PostgreSQL", "Supabase", "Prisma", "MySQL", "Elasticsearch", "Dapper ORM", "REST APIs"],
+    skills: ["PostgreSQL", "Supabase", "Prisma", "MySQL", "Elasticsearch", "Dapper ORM", "REST APIs", "Row-Level Security"],
   },
   {
     category: "Cloud, DevOps & Scraping",
@@ -194,6 +231,9 @@ export const skills: SkillGroup[] = [
       "Intercom",
       "Asana",
       "Monday.com",
+      "Salesforce",
+      "HubSpot",
+      "Google & Outlook OAuth",
       "Microsoft 365 Graph",
       "Hyperledger Fabric",
       "Smart Contracts",
@@ -220,6 +260,8 @@ export const experience: ExperienceItem[] = [
       "Led the AI Chat QA Tool project as Project Lead for a Europe-based client — owning architecture, implementation, and delivery.",
       "Designed conversational logic and evaluation flows with OpenAI and Anthropic Claude APIs using structured prompt engineering for production-grade outputs.",
       "Built and deployed the full stack on Vercel and Supabase, with version control and CI managed through GitHub.",
+      "Built Networky.ai, a voice-first relationship-intelligence CRM with Google, Outlook, Salesforce, and HubSpot sync, as its lead developer.",
+      "Shipped five SEO & ranking dashboards for iGaming affiliate clients, replacing spreadsheet reporting with scheduled ranking sync, role-based access, and OpenAI-powered Q&A.",
       "Ran discovery sessions, demoed iterations, and translated business needs into technical specs.",
     ],
   },
