@@ -19,7 +19,7 @@ export const profile = {
     "I design and ship production AI systems — agents, automations, and full-stack apps that turn messy, manual work into reliable, self-running pipelines. From multi-source scrapers to multi-tenant SaaS, I take projects from discovery to launch.",
   location: "Cebu City, Philippines",
   company: "Optinet Solutions",
-  email: "jose@optinetsolutions.com",
+  email: "terdesjosefelipe@gmail.com",
   phone: "0977 369 3095",
   // Drop your résumé PDF into /public (e.g. public/jose-terdes-resume.pdf) and
   // set this to "/jose-terdes-resume.pdf" to show a download button in the hero.
@@ -31,7 +31,7 @@ export const profile = {
   // Leave blank to fall back to opening the visitor's email client (mailto).
   formspreeId: "",
   socials: {
-    github: "https://github.com/jose-innovationhub",
+    github: "https://github.com/joseterdes",
     linkedin: "https://www.linkedin.com/in/jose-felipe-terdes/",
     twitter: "",
     website: "",
