@@ -13,3 +13,6 @@ next-env.d.ts
 *.tsbuildinfo
 
 .vercel
+
+# Generated PDFs (cover letter, portfolio) — kept local, rebuilt by scripts/make-docs.py
+/docs
