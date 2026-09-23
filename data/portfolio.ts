@@ -11,7 +11,7 @@ export const profile = {
   // Roles rotate via the typing effect in the hero
   roles: [
     "AI Automation Engineer",
-    "AI Specialist",
+    "Senior AI Specialist",
     "Full-Stack Developer",
     "Systems Builder",
   ],
@@ -251,7 +251,7 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    role: "AI Specialist | AI Automation Engineer",
+    role: "Senior AI Specialist | AI Automation Engineer",
     company: "Optinet Solutions (Innovation Hub)",
     period: "Apr 2026 — Present",
     description:
